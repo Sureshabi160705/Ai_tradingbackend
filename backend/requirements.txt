@@ -1,0 +1,13 @@
+flask
+pandas
+yfinance
+ta
+numpy
+requests
+TA-Lib
+scikit-learn
+plotly
+joblib
+pytz
+datetime
+Pillow
