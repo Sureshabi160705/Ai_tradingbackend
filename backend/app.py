@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify, request
+from flask_cors import CORS
 import yfinance as yf
 import pandas as pd
 import json
@@ -15,6 +16,9 @@ from option_chain import process_option_chain, get_oi_analysis, get_atm_strikes
 from auto_trader import get_auto_predictions
 
 app = Flask(__name__)
+
+# Enable CORS for all routes - allows frontend on Render to access the API
+CORS(app)
 
 # Configure upload folder
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'uploads')
